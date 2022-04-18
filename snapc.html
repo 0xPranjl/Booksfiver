@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>How to capture picture from webcam with Webcam.js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+            $("#slide").slideUp(2000);
+        });
+    </script>
+    <!-- CSS -->
+    <style>
+    #my_camera{
+        width: 320px;
+        height: 300px;
+        border: 1px solid black;
+    }
+    .container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem;
+}
+
+.panel {
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 0.2rem;
+  background-color: #F5F5F5;
+  color: #323B40;
+}
+.panel.panel-blue {
+  background-color: #E0F5FF;
+  color: #00A5FA;
+}
+.panel.panel-big-height {
+  min-height: 150px;
+}
+
+.item {
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.2rem;
+}
+.item.item-blue {
+  background-color: #B9E5FE;
+  color: #00A5FA;
+}
+.item.item-green {
+  background-color: #B7E0DC;
+  color: #019888;
+}
+.item.item-lime {
+  background-color: #C7E8C8;
+  color: #42B045;
+}
+.item.item-yellow {
+  background-color: #FFEEBA;
+  color: #FF9901;
+}
+.item.item-pink {
+  background-color: #FABAD0;
+  color: #EF075F;
+}
+.item.item-red {
+  background-color: #FEC9C6;
+  color: #FD3D08;
+}
+.item.item-big-width {
+  min-width: 380px;
+}
+	</style>
+    <h1 style='margin:auto; display: block;'>TaKe and Upload Photo</h1><br><br>
+<div style='margin:auto; display: block;'>
+    <div class="container">
+  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#form">
+    See Modal with Form
+  </button>  
+</div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div id="my_camera"></div>
+            <input type=button value="Front Side Photo" id="tak" onClick="take_snapshot()">
+            <input type=button value="Done" id="sav" onClick="saveSnap()">
+            <div id="results" ></div>
+            </div>
+        </div>
+       
+    </div>
+  </div>
+</div>
+	<!-- Webcam.min.js -->
+    <script type="text/javascript" src="webcam.min.js"></script>
+
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+	 // Configure a few settings and attach camera
+
+    Webcam.set('constraints',{
+        facingMode: "environment",
+        width: 400,
+      height: 290,
+      image_format: 'jpeg',
+      jpeg_quality: 90
+    });
+    Webcam.attach( '#my_camera' );
+    // preload shutter audio clip
+    var shutter = new Audio();
+    shutter.autoplay = true;
+    shutter.src = navigator.userAgent.match(/Firefox/) ? 'shutter.ogg' : 'shutter.mp3';
+
+    function take_snapshot() {
+        // play sound effect
+        shutter.play();
+    
+        // take snapshot and get image data
+        Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('results').innerHTML = 
+            '<img id="imageprev" height="360" width="270" src="'+data_uri+'"/>';
+            $('#my_camera').hide();
+        
+        } );
+    }
+    function saveSnap(){
+ // Get base64 value from <img id='imageprev'> source
+ var base64image = document.getElementById("imageprev").src;
+
+ Webcam.upload( base64image, 'upload.php', function(code, text) {
+  console.log('Save successfully');
+  alert("Uploaded Successfully");
+  // window.location.replace("https://www.insta2youtube.com/snapc.html");
+  //console.log(text);
+ });
+
+}
+
+	</script>	
+    <script>
+        $('#cameraFlip').click(function() {
+  webcam.flip();
+  webcam.start();
+
+});
+$(document).ready(function(){
+$('#sav').hide();
+});
+$('#tak').click(function(){
+  $('#sav').show();
+  if($('#tak').attr('value')==='Retake'){
+$('#my_camera').show();
+$('#tak').attr('value','Front Side Photo');
+
+$('#imageprev').hide();  
+}
+else if($('#tak').attr('value')==='Try again'){
+$('#my_camera').show();
+$('#tak').attr('value','Back Side Photo');
+
+$('#imageprev').hide();  
+}
+  else if($('#tak').attr('value')==="Front Side Photo"){
+    $('#tak').attr('value','Retake');
+
+    }
+    else if($('#tak').attr('value')==="Back Side Photo"){
+    $('#tak').attr('value','Try again');
+
+    }
+  });
+$('#sav').click(function(){
+  if($('#tak').attr('value')==="Back Side Photo"){
+        $('#tak').attr('value','Try again');
+        $('#sav').hide();
+        $('#imageprev').show(); 
+    }
+  $('#my_camera').show();
+  $('#imageprev').hide();  
+  $('#tak').attr('value','Back Side Photo');
+    // else{    $('#tak').attr('value','Retake');
+    //     $('#tak').attr('value','Back Side Photo');
+ 
+    // }
+});
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

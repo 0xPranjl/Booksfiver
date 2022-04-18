@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+      <form id='testo'>
+        <select class="form-control" name='category' id="rats">
+            <option>CLASS 9</option>
+            <option>CLASS 10</option>
+            <option>CLASS 11</option>
+            <option>CLASS 12</option>
+            <option>JEE</option>
+            <option>NEET</option>
+            <option>UPSC</option>
+            <option>SSC</option>
+            <option>OTHER</option>
+          </select><br>
+<input type='button' id='btn' value="submit"/>
+</form>
+<script>
+    $("#btn").click(function(){
+    $.ajax({
+       url:"popo.php",
+       type:"POST",
+       data:$("#testo").serialize(),
+       success:function(data){
+        alert(data);
+       }
+    });
+    });
+</script>  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

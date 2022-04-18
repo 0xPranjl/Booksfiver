@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://rajputlagn.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Rajput Lagn</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" > -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://rajputlagn.com/assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://rajputlagn.com/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://rajputlagn.com/assets/img/favicon-16x16.png">
+  <link rel="manifest" href="https://rajputlagn.com/assets/img/site.webmanifest">
+
+  <!-- bootstrap cdn -->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="./lk_files/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="./lk_files/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="./lk_files/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="./lk_files/bootstrap.min.js"></script>
+
+
+  <!-- font-awesome CDN -->
+
+  <link rel="stylesheet" href="./lk_files/font-awesome.min.css">
+
+  <link rel="stylesheet" href="./lk_files/font-awesome.min(1).css">
+
+
+  <link rel="stylesheet" href="./lk_files/font-awesome.min(2).css">
+
+
+  <link href="./lk_files/css" rel="stylesheet">
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async="" src="./lk_files/js"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+ 
+     gtag('config', 'G-X2JXZST15X');
+   </script>
+
+<style>/* You can add global styles to this file, and also import other style files */
+
+:root{
+    font-family: 'Mulish';
+
+}
+
+body{
+    font-family: 'Mulish';
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Mulish';
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 36px;
+  }
+
+.switch input {display:none;}
+
+.prisingslider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D61669;
+    transition: .4s;
+    border-radius: 6px;
+  }
+
+.prisingslider:before {
+    position: absolute;
+    content: "";
+    height: 34px;
+    width: 34px;
+    top: 1px;
+    left: 1px;
+    right: 1px !important;
+    bottom: 1px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 6px;
+  }
+
+input:checked + .prisingslider {
+    background-color: #F37C30;
+  }
+
+input:focus + .prisingslider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+input:checked + .prisingslider:before {
+    transform: translateX(55px);
+  }
+
+.prisingslider:after {
+    content:'हिंदी';
+    color: white;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+    margin-left:18px;
+  }
+
+input:checked + .prisingslider:after {
+    content:'English';
+    font-weight: 800;
+
+    margin-left:-18px;
+  }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc3R5bGVzLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw4RUFBOEU7O0FBRTlFO0lBQ0kscUJBQXFCOztBQUV6Qjs7QUFDQTtJQUNJLHFCQUFxQjtBQUN6Qjs7QUFDQTtJQUNJLHVCQUF1QjtJQUN2QixxQkFBcUI7QUFDekI7O0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIscUJBQXFCO0lBQ3JCLFdBQVc7SUFDWCxZQUFZO0VBQ2Q7O0FBRUEsZUFBZSxZQUFZLENBQUM7O0FBRTVCO0lBQ0Usa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZixNQUFNO0lBQ04sT0FBTztJQUNQLFFBQVE7SUFDUixTQUFTO0lBQ1QseUJBQXlCO0lBRXpCLGVBQWU7SUFDZixrQkFBa0I7RUFDcEI7O0FBRUE7SUFDRSxrQkFBa0I7SUFDbEIsV0FBVztJQUNYLFlBQVk7SUFDWixXQUFXO0lBQ1gsUUFBUTtJQUNSLFNBQVM7SUFDVCxxQkFBcUI7SUFDckIsV0FBVztJQUNYLHVCQUF1QjtJQUN2QixnQkFBZ0I7SUFDaEIsa0JBQWtCO0VBQ3BCOztBQUVBO0lBQ0UseUJBQXlCO0VBQzNCOztBQUVBO0lBQ0UsMkJBQTJCO0VBQzdCOztBQUVBO0lBR0UsMkJBQTJCO0VBQzdCOztBQUVBO0lBQ0UsZUFBZTtJQUNmLFlBQVk7SUFDWixjQUFjO0lBQ2QsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQiwrQkFBK0I7SUFDL0IsUUFBUTtJQUNSLFNBQVM7SUFDVCxlQUFlO0lBQ2YsZ0NBQWdDO0lBQ2hDLGdCQUFnQjtFQUNsQjs7QUFDQTtJQUNFLGlCQUFpQjtJQUNqQixnQkFBZ0I7O0lBRWhCLGlCQUFpQjtFQUNuQiIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cblxuOnJvb3R7XG4gICAgZm9udC1mYW1pbHk6ICdNdWxpc2gnO1xuXG59XG5ib2R5e1xuICAgIGZvbnQtZmFtaWx5OiAnTXVsaXNoJztcbn1cbmh0bWx7XG4gICAgc2Nyb2xsLWJlaGF2aW9yOiBzbW9vdGg7XG4gICAgZm9udC1mYW1pbHk6ICdNdWxpc2gnO1xufVxuLnN3aXRjaCB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICB3aWR0aDogOTBweDtcbiAgICBoZWlnaHQ6IDM2cHg7XG4gIH1cbiAgXG4gIC5zd2l0Y2ggaW5wdXQge2Rpc3BsYXk6bm9uZTt9XG4gIFxuICAucHJpc2luZ3NsaWRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB0b3A6IDA7XG4gICAgbGVmdDogMDtcbiAgICByaWdodDogMDtcbiAgICBib3R0b206IDA7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0Q2MTY2OTs7XG4gICAgLXdlYmtpdC10cmFuc2l0aW9uOiAuNHM7XG4gICAgdHJhbnNpdGlvbjogLjRzO1xuICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgfVxuICBcbiAgLnByaXNpbmdzbGlkZXI6YmVmb3JlIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgY29udGVudDogXCJcIjtcbiAgICBoZWlnaHQ6IDM0cHg7XG4gICAgd2lkdGg6IDM0cHg7XG4gICAgdG9wOiAxcHg7XG4gICAgbGVmdDogMXB4O1xuICAgIHJpZ2h0OiAxcHggIWltcG9ydGFudDtcbiAgICBib3R0b206IDFweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB0cmFuc2l0aW9uOiAwLjRzO1xuICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgfVxuICBcbiAgaW5wdXQ6Y2hlY2tlZCArIC5wcmlzaW5nc2xpZGVyIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRjM3QzMwO1xuICB9XG4gIFxuICBpbnB1dDpmb2N1cyArIC5wcmlzaW5nc2xpZGVyIHtcbiAgICBib3gtc2hhZG93OiAwIDAgMXB4ICMyMTk2RjM7XG4gIH1cbiAgXG4gIGlucHV0OmNoZWNrZWQgKyAucHJpc2luZ3NsaWRlcjpiZWZvcmUge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDI2cHgpO1xuICAgIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMjZweCk7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDU1cHgpO1xuICB9XG4gIFxuICAucHJpc2luZ3NsaWRlcjphZnRlciB7XG4gICAgY29udGVudDon4KS54KS/4KSC4KSm4KWAJztcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsLTUwJSk7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIGZvbnQtc2l6ZTogMTBweDtcbiAgICBmb250LWZhbWlseTogVmVyZGFuYSwgc2Fucy1zZXJpZjtcbiAgICBtYXJnaW4tbGVmdDoxOHB4O1xuICB9XG4gIGlucHV0OmNoZWNrZWQgKyAucHJpc2luZ3NsaWRlcjphZnRlciB7XG4gICAgY29udGVudDonRW5nbGlzaCc7XG4gICAgZm9udC13ZWlnaHQ6IDgwMDtcblxuICAgIG1hcmdpbi1sZWZ0Oi0xOHB4O1xuICB9XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */</style><meta name="keywords" content="Rajput widow bride,Rajput boys in mp,rajput matrimonial vadodara,chauhan caste in bihar,rajput matrimony rajasthan,chandel caste in himachal,beautiful rajput brides,rajput matrimony jaipur,rajasthani rajput grooms,sadi.com boy,widow girl for marriage in bihar,www shaadi com boy image,verma caste in punjab,rajput girl for marriage in bihar,kirar rajput,thakur is which caste,minhas caste,bihari groom,rohilla caste in delhi,thakur caste in himachal pradesh,rajput ladki,thakur marriage,rajawat caste category,kumaoni rajput grooms,thakur matrimony,verma caste in uttar pradesh,rajput matrimonial gujarati,rajput marriage sites,rajasthani rajput bride,verma belongs to which caste,tanwar caste in haryana,rajput marriage rules,rana caste in punjab,rajput vivah photos,dogra caste in himachal pradesh,thakur girl,kushwaha rajput,thakur caste in uttarakhand,chauhan caste in up,rajput wedding rituals,rajput rishtey,sikh rajput matrimony,bisht caste,bihari rajput,kushwaha grooms in up,chauhan caste in gujarat,free rajput matrimonial sites,kushwaha bride,rajasthan bride,rajput traditions,bihari rajput boy for marriage,baghel rajput,divorce lady in himachal pradesh,kumaoni groom,ahmedabad in gujarati,bihari girl for marriage,thakur caste in punjab,rajput uttar pradesh,chandrawat caste,kumaoni rajput brides,rajput marriage bureau,thakur gujarat,verma caste in haryana,bisen rajput,rajput matrimonial photos,chauhan caste category,chandel caste,rohilla caste in haryana,madhya pradesh girls,kushwaha brides,rana surname,bihari rajput bride,bengali rajput,rajasthani brides,jammu brides,kumaoni matrimonial rajput,divorced girl for marriage,bisht scheduled caste,rajput marriage rules in hindi,rajput in maharashtra,gujarat bhojpuri,naruka rajput,rajasthan girls,royal rajput brides,chandel surname caste,verma caste in mp,girl for marriage in bihar,ओडिशा में राजपूत,rajput bride images,rajput girl matrimonial,chandravanshi girl in patna,rajputs in himachal pradesh,thakur grooms,bihari rajput girl for marriage,sadi com hindu girl rajasthan,delhi rajput,kumaoni rajput bride,pakistani rajput matrimonial,rathore rajput photos,rajput in up,rajput brides images,rawat which caste,chouhan rajput,garhwali rajput,muslim rajput marriage,kushwaha caste in rajasthan,rajputs of himachal pradesh,bihar marriage girl photo,tanwar caste in rajasthan,matrimony divorce,rajput family shaadi,राजपूत मैरिज ब्यूरो,rathore girl for marriage,ambala matrimony,rajput app,matrimony site,rajput groom matrimonial,vaishali rajput,bangladesh rathore,rajput beautiful girl,जीवन साथी कॉम हिन्दू गर्ल,rajput dress man,rajput rathore photo,girls in jaipur,rajputs architecture,widow bride search,hyderabad matrimonial,indian mumbai girls,rajput mail,shaadi com reviews,rajput samaj"><meta name="description" content="Best online matrimony site for Rajputs"><meta name="robots" content="index, follow"><style>.section1[_ngcontent-prc-c16]{
+    background-image: url('Rectangle 9.png');
+    
+    
+    
+    background-size: 100% 100%;
+    position: relative;
+    left: 0px;
+    top: 0px;   
+    height: 690px;
+}
+.logo[_ngcontent-prc-c16]{
+    position: relative;
+    width: 136px;
+    height: 62.92px;
+    left: 80px;
+    top: 20px;
+    }
+.mainheading[_ngcontent-prc-c16]{
+        
+        
+        position: relative;
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 58px;
+        line-height: 73px;
+        color: #FFFFFF;
+    }
+.perasection1[_ngcontent-prc-c16]{
+    position: relative;
+    
+    
+    
+    top: 20px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 33px;
+    color: #FFFFFF;
+    text-align: justify;
+}
+.section1Leftcol[_ngcontent-prc-c16]{
+    position: relative;
+    top: 70px;
+    left: 80px;
+
+}
+.langimg[_ngcontent-prc-c16]{
+    position: relative;
+    top: -23px;
+}
+.loginimg[_ngcontent-prc-c16]{
+    position: absolute;
+    
+    right: 13.86%;
+    left: 172px;
+    top: 23.55%;
+    
+}
+.playStore[_ngcontent-prc-c16]{
+position: relative;
+top: 68px;
+}
+.appStore[_ngcontent-prc-c16]{
+    position: relative;
+    top: 68px;
+    left: 20px;
+}
+.card[_ngcontent-prc-c16]{
+    width: 260px;
+    height: 360px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 60px rgba(231, 89, 53, 0.3);
+    }
+.headingsec2[_ngcontent-prc-c16]{
+        position: absolute;
+        
+        
+        left: 80px;
+        top: 86px;
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 58px;
+        line-height: 73px;
+        color: #FFFFFF;
+    }
+.perasection2[_ngcontent-prc-c16]{
+        position: absolute;
+
+left: 80px;
+top: 164px;
+
+font-family: Mulish;
+font-style: normal;
+font-weight: 800;
+font-size: 58px;
+line-height: 73px;
+
+color: #FFFFFF;
+    }
+.laptopcurser[_ngcontent-prc-c16]{
+    margin-top: 23% !important;
+    }
+.card-text[_ngcontent-prc-c16]{
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        
+        
+        text-align: center;
+        
+        color: #D61669;
+        }
+.cardpera[_ngcontent-prc-c16]{
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            
+            color: #202020;
+            }
+.footer[_ngcontent-prc-c16]{
+                margin-top: 13%;
+            }
+.togglebtn[_ngcontent-prc-c16]{
+                    margin-top: 1%;
+                }
+.scrolimg[_ngcontent-prc-c16]{
+                    margin-top: 4%;
+                }
+.linkdinimg[_ngcontent-prc-c16]{
+    width: 21%;
+}
+.tagline[_ngcontent-prc-c16]{
+    font-family: Tangerine;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 28px;
+
+
+
+color: #FFFFFF;
+}
+@media (max-width: 480px) {
+    .logo[_ngcontent-prc-c16]{
+        position: relative;
+        width: 136px;
+        height: 62.92px;
+        left: 0;
+        top: 20px;
+        }
+        .laptopcurser[_ngcontent-prc-c16]{
+            display: none;
+        }
+        .section1Leftcol[_ngcontent-prc-c16]{
+            position: relative;
+            top: 70px;
+            left: 0;
+        
+        }
+        #about-rajput-lagn[_ngcontent-prc-c16]{
+            position: relative;
+            top: 415px;
+        left: 0;
+
+        }
+        .onlylaptop[_ngcontent-prc-c16]{
+            display: none;
+        }
+        .downloadstoremobile[_ngcontent-prc-c16]{
+            position: relative;
+            top: 555px;
+            left: 0;
+            text-align: center;
+        }
+        .appStore[_ngcontent-prc-c16]{
+            position: relative;
+            left: 0;
+            margin-top: 10%;
+        }
+        .langimg[_ngcontent-prc-c16]{
+            width: 50%;
+            position: relative;
+            top: -23px;
+            left: 37px;
+        }
+        .loginimg[_ngcontent-prc-c16]{
+            width: 50%;
+
+        }
+    .mainheading[_ngcontent-prc-c16]{
+
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 45px;
+        
+        color: #FFFFFF;}
+
+        .perasection1[_ngcontent-prc-c16]{
+
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        
+        color: #FFFFFF;
+        }
+.footer[_ngcontent-prc-c16]{
+    position: relative;
+    top: 440px;
+}
+.footerdownloadlink[_ngcontent-prc-c16]{
+    text-align: center;
+    margin-bottom: 10%;
+}
+.headingsec2[_ngcontent-prc-c16]{
+    position: relative;
+    
+    
+    left: 18px;
+    top: 50px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+.perasection2[_ngcontent-prc-c16]{
+    position: relative;
+    
+    
+    left: 18px;
+    top: 60px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FFFFFF;
+}
+.carousel-item[_ngcontent-prc-c16]{
+    text-align: center;
+}
+.carousel-item[_ngcontent-prc-c16] {
+    margin-left: 26px;
+}
+.carousel-indicators[_ngcontent-prc-c16] {
+    position: relative;
+right: 0;
+bottom: 0;
+
+left: 0;
+z-index: 15;
+top: 396px;}
+
+.togglebtn[_ngcontent-prc-c16]{
+margin-left: 57%;
+    margin-top: -25%;
+}
+.linkdinimg[_ngcontent-prc-c16]{
+    width: 18%;
+}
+}
+@media (min-width: 480px) {
+    .formobile[_ngcontent-prc-c16]{
+        display: none;
+    }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSx3Q0FBdUQ7SUFDdkQsdURBQXVEO0lBQ3ZELDJHQUEyRztJQUMzRyxrQ0FBa0M7SUFDbEMsMEJBQTBCO0lBQzFCLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsUUFBUTtJQUNSLGFBQWE7QUFDakI7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixZQUFZO0lBQ1osZUFBZTtJQUNmLFVBQVU7SUFDVixTQUFTO0lBQ1Q7QUFDQTtRQUNJLGdCQUFnQjtRQUNoQixnQkFBZ0I7UUFDaEIsa0JBQWtCO1FBQ2xCLG1CQUFtQjtRQUNuQixrQkFBa0I7UUFDbEIsZ0JBQWdCO1FBQ2hCLGVBQWU7UUFDZixpQkFBaUI7UUFDakIsY0FBYztJQUNsQjtBQUNKO0lBQ0ksa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLFNBQVM7SUFDVCxtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2YsaUJBQWlCO0lBQ2pCLGNBQWM7SUFDZCxtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsVUFBVTs7QUFFZDtBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLFVBQVU7QUFDZDtBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsV0FBVztJQUNYLFdBQVc7SUFDWCxtQkFBbUI7QUFDdkI7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQixTQUFTO0FBQ1Q7QUFDQTtJQUNJLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsVUFBVTtBQUNkO0FBQ0E7SUFDSSxZQUFZO0lBQ1osYUFBYTtJQUNiLHlCQUF5QjtJQUN6QiwrQ0FBK0M7SUFDL0M7QUFDQTtRQUNJLGtCQUFrQjtRQUNsQixrQkFBa0I7UUFDbEIsa0JBQWtCO1FBQ2xCLFVBQVU7UUFDVixTQUFTO1FBQ1QsbUJBQW1CO1FBQ25CLGtCQUFrQjtRQUNsQixnQkFBZ0I7UUFDaEIsZUFBZTtRQUNmLGlCQUFpQjtRQUNqQixjQUFjO0lBQ2xCO0FBQ0E7UUFDSSxrQkFBa0I7O0FBRTFCLFVBQVU7QUFDVixVQUFVOztBQUVWLG1CQUFtQjtBQUNuQixrQkFBa0I7QUFDbEIsZ0JBQWdCO0FBQ2hCLGVBQWU7QUFDZixpQkFBaUI7O0FBRWpCLGNBQWM7SUFDVjtBQUVBO0lBQ0EsMEJBQTBCO0lBQzFCO0FBQ0E7UUFDSSxxQkFBcUI7UUFDckIsa0JBQWtCO1FBQ2xCLGdCQUFnQjtRQUNoQixlQUFlO1FBQ2YsaUJBQWlCO1FBQ2pCLDRCQUE0Qjs7UUFFNUIsa0JBQWtCOztRQUVsQixjQUFjO1FBQ2Q7QUFDQTtZQUNJLHFCQUFxQjtZQUNyQixrQkFBa0I7WUFDbEIsZ0JBQWdCO1lBQ2hCLGVBQWU7WUFDZixpQkFBaUI7WUFDakIsa0JBQWtCOztZQUVsQixjQUFjO1lBQ2Q7QUFFQTtnQkFDSSxlQUFlO1lBQ25CO0FBQ0E7b0JBQ1EsY0FBYztnQkFDbEI7QUFDRDtvQkFDSyxjQUFjO2dCQUNsQjtBQUNoQjtJQUNJLFVBQVU7QUFDZDtBQUNBO0lBQ0ksc0JBQXNCO0FBQzFCLGtCQUFrQjtBQUNsQixpQkFBaUI7QUFDakIsZUFBZTtBQUNmLGlCQUFpQjtBQUNqQiw0QkFBNEI7OztBQUc1QixjQUFjO0FBQ2Q7QUFFQTtJQUNJO1FBQ0ksa0JBQWtCO1FBQ2xCLFlBQVk7UUFDWixlQUFlO1FBQ2YsT0FBTztRQUNQLFNBQVM7UUFDVDtRQUNBO1lBQ0ksYUFBYTtRQUNqQjtRQUNBO1lBQ0ksa0JBQWtCO1lBQ2xCLFNBQVM7WUFDVCxPQUFPOztRQUVYO1FBQ0E7WUFDSSxrQkFBa0I7WUFDbEIsVUFBVTtRQUNkLE9BQU87O1FBRVA7UUFDQTtZQUNJLGFBQWE7UUFDakI7UUFDQTtZQUNJLGtCQUFrQjtZQUNsQixVQUFVO1lBQ1YsT0FBTztZQUNQLGtCQUFrQjtRQUN0QjtRQUNBO1lBQ0ksa0JBQWtCO1lBQ2xCLE9BQU87WUFDUCxlQUFlO1FBQ25CO1FBQ0E7WUFDSSxVQUFVO1lBQ1Ysa0JBQWtCO1lBQ2xCLFVBQVU7WUFDVixVQUFVO1FBQ2Q7UUFDQTtZQUNJLFVBQVU7O1FBRWQ7SUFDSjs7UUFFSSxtQkFBbUI7UUFDbkIsa0JBQWtCO1FBQ2xCLGdCQUFnQjtRQUNoQixlQUFlO1FBQ2YsaUJBQWlCOztRQUVqQixjQUFjLENBQUM7O1FBRWY7O1FBRUEsbUJBQW1CO1FBQ25CLGtCQUFrQjtRQUNsQixnQkFBZ0I7UUFDaEIsZUFBZTtRQUNmLGlCQUFpQjs7UUFFakIsY0FBYztRQUNkO0FBQ1I7SUFDSSxrQkFBa0I7SUFDbEIsVUFBVTtBQUNkO0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIsa0JBQWtCO0FBQ3RCO0FBQ0E7SUFDSSxrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YsU0FBUztJQUNULG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixpQkFBaUI7SUFDakIsY0FBYztBQUNsQjtBQUNBO0lBQ0ksa0JBQWtCO0lBQ2xCLGtCQUFrQjtJQUNsQixrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLFNBQVM7SUFDVCxtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGdCQUFnQjtJQUNoQixlQUFlO0lBQ2YsaUJBQWlCO0lBQ2pCLGNBQWM7QUFDbEI7QUFDQTtJQUNJLGtCQUFrQjtBQUN0QjtBQUNBO0lBQ0ksaUJBQWlCO0FBQ3JCO0FBQ0E7SUFDSSxrQkFBa0I7QUFDdEIsUUFBUTtBQUNSLFNBQVM7QUFDVCxzQkFBc0I7QUFDdEIsT0FBTztBQUNQLFdBQVc7QUFDWCxVQUFVLENBQUM7O0FBRVg7QUFDQSxnQkFBZ0I7SUFDWixnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLFVBQVU7QUFDZDtBQUNBO0FBR0E7SUFDSTtRQUNJLGFBQWE7SUFDakI7QUFDSiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNlY3Rpb24xe1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcInNyYy9hc3NldHMvaW1nL1JlY3RhbmdsZSA5LnBuZ1wiKTtcbiAgICAvKiBjbGlwLXBhdGg6IHBvbHlnb24oMTAwJSAwLCAxMDAlIDg1JSwgMCAxMDAlLCAwIDApOyAqL1xuICAgIC8qIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgzNTkuMzlkZWcsICNENjE2NjkgNC43MSUsICNFMTJBNUEgMjQuODElLCAjRjU0RTNFIDY1LjAxJSwgI0U3NTkzNSA4Ni4yMyUpOyAqL1xuICAgIC8qIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7ICovXG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGxlZnQ6IDBweDtcbiAgICB0b3A6IDBweDsgICBcbiAgICBoZWlnaHQ6IDY5MHB4O1xufVxuLmxvZ297XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiAxMzZweDtcbiAgICBoZWlnaHQ6IDYyLjkycHg7XG4gICAgbGVmdDogODBweDtcbiAgICB0b3A6IDIwcHg7XG4gICAgfVxuICAgIC5tYWluaGVhZGluZ3tcbiAgICAgICAgLyogbGVmdDogODBweDsgKi9cbiAgICAgICAgLyogdG9wOiAtMzVweDsgKi9cbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICBmb250LWZhbWlseTogTXVsaXNoO1xuICAgICAgICBmb250LXN0eWxlOiBub3JtYWw7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7XG4gICAgICAgIGZvbnQtc2l6ZTogNThweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDczcHg7XG4gICAgICAgIGNvbG9yOiAjRkZGRkZGO1xuICAgIH1cbi5wZXJhc2VjdGlvbjF7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIC8qIHdpZHRoOiA1MzZweDsgKi9cbiAgICAvKiBoZWlnaHQ6IDEzMnB4OyAqL1xuICAgIC8qIGxlZnQ6IDgwcHg7ICovXG4gICAgdG9wOiAyMHB4O1xuICAgIGZvbnQtZmFtaWx5OiBNdWxpc2g7XG4gICAgZm9udC1zdHlsZTogbm9ybWFsO1xuICAgIGZvbnQtd2VpZ2h0OiAyMDA7XG4gICAgZm9udC1zaXplOiAyNnB4O1xuICAgIGxpbmUtaGVpZ2h0OiAzM3B4O1xuICAgIGNvbG9yOiAjRkZGRkZGO1xuICAgIHRleHQtYWxpZ246IGp1c3RpZnk7XG59XG4uc2VjdGlvbjFMZWZ0Y29se1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB0b3A6IDcwcHg7XG4gICAgbGVmdDogODBweDtcblxufVxuLmxhbmdpbWd7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHRvcDogLTIzcHg7XG59XG4ubG9naW5pbWd7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIC8qIGxlZnQ6IDc1Ljk5JTsgKi9cbiAgICByaWdodDogMTMuODYlO1xuICAgIGxlZnQ6IDE3MnB4O1xuICAgIHRvcDogMjMuNTUlO1xuICAgIC8qIGJvdHRvbTogMy4wNCU7OCovXG59XG4ucGxheVN0b3Jle1xucG9zaXRpb246IHJlbGF0aXZlO1xudG9wOiA2OHB4O1xufVxuLmFwcFN0b3Jle1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICB0b3A6IDY4cHg7XG4gICAgbGVmdDogMjBweDtcbn1cbi5jYXJke1xuICAgIHdpZHRoOiAyNjBweDtcbiAgICBoZWlnaHQ6IDM2MHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkZGRkY7XG4gICAgYm94LXNoYWRvdzogMHB4IDBweCA2MHB4IHJnYmEoMjMxLCA4OSwgNTMsIDAuMyk7XG4gICAgfVxuICAgIC5oZWFkaW5nc2VjMntcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAvKiB3aWR0aDogMTM2cHg7ICovXG4gICAgICAgIC8qIGhlaWdodDogNzRweDsgKi9cbiAgICAgICAgbGVmdDogODBweDtcbiAgICAgICAgdG9wOiA4NnB4O1xuICAgICAgICBmb250LWZhbWlseTogTXVsaXNoO1xuICAgICAgICBmb250LXN0eWxlOiBub3JtYWw7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiAyMDA7XG4gICAgICAgIGZvbnQtc2l6ZTogNThweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDczcHg7XG4gICAgICAgIGNvbG9yOiAjRkZGRkZGO1xuICAgIH1cbiAgICAucGVyYXNlY3Rpb24ye1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG5cbmxlZnQ6IDgwcHg7XG50b3A6IDE2NHB4O1xuXG5mb250LWZhbWlseTogTXVsaXNoO1xuZm9udC1zdHlsZTogbm9ybWFsO1xuZm9udC13ZWlnaHQ6IDgwMDtcbmZvbnQtc2l6ZTogNThweDtcbmxpbmUtaGVpZ2h0OiA3M3B4O1xuXG5jb2xvcjogI0ZGRkZGRjtcbiAgICB9XG5cbiAgICAubGFwdG9wY3Vyc2Vye1xuICAgIG1hcmdpbi10b3A6IDIzJSAhaW1wb3J0YW50O1xuICAgIH1cbiAgICAuY2FyZC10ZXh0e1xuICAgICAgICBmb250LWZhbWlseTogJ011bGlzaCc7XG4gICAgICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgICAgZm9udC1zaXplOiAyMHB4O1xuICAgICAgICBsaW5lLWhlaWdodDogMjVweDtcbiAgICAgICAgLyogaWRlbnRpY2FsIHRvIGJveCBoZWlnaHQgKi9cbiAgICAgICAgXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgXG4gICAgICAgIGNvbG9yOiAjRDYxNjY5O1xuICAgICAgICB9XG4gICAgICAgIC5jYXJkcGVyYXtcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnTXVsaXNoJztcbiAgICAgICAgICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiAzMDA7XG4gICAgICAgICAgICBmb250LXNpemU6IDE4cHg7XG4gICAgICAgICAgICBsaW5lLWhlaWdodDogMjNweDtcbiAgICAgICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICAgICAgICAgIFxuICAgICAgICAgICAgY29sb3I6ICMyMDIwMjA7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5mb290ZXJ7XG4gICAgICAgICAgICAgICAgbWFyZ2luLXRvcDogMTMlO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLnRvZ2dsZWJ0bntcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luLXRvcDogMSU7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICAgLnNjcm9saW1ne1xuICAgICAgICAgICAgICAgICAgICBtYXJnaW4tdG9wOiA0JTtcbiAgICAgICAgICAgICAgICB9XG4ubGlua2RpbmltZ3tcbiAgICB3aWR0aDogMjElO1xufVxuLnRhZ2xpbmV7XG4gICAgZm9udC1mYW1pbHk6IFRhbmdlcmluZTtcbmZvbnQtc3R5bGU6IG5vcm1hbDtcbmZvbnQtd2VpZ2h0OiBib2xkO1xuZm9udC1zaXplOiAxOHB4O1xubGluZS1oZWlnaHQ6IDI4cHg7XG4vKiBpZGVudGljYWwgdG8gYm94IGhlaWdodCAqL1xuXG5cbmNvbG9yOiAjRkZGRkZGO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogNDgwcHgpIHtcbiAgICAubG9nb3tcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB3aWR0aDogMTM2cHg7XG4gICAgICAgIGhlaWdodDogNjIuOTJweDtcbiAgICAgICAgbGVmdDogMDtcbiAgICAgICAgdG9wOiAyMHB4O1xuICAgICAgICB9XG4gICAgICAgIC5sYXB0b3BjdXJzZXJ7XG4gICAgICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgICAgICB9XG4gICAgICAgIC5zZWN0aW9uMUxlZnRjb2x7XG4gICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgICB0b3A6IDcwcHg7XG4gICAgICAgICAgICBsZWZ0OiAwO1xuICAgICAgICBcbiAgICAgICAgfVxuICAgICAgICAjYWJvdXQtcmFqcHV0LWxhZ257XG4gICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgICB0b3A6IDQxNXB4O1xuICAgICAgICBsZWZ0OiAwO1xuXG4gICAgICAgIH1cbiAgICAgICAgLm9ubHlsYXB0b3B7XG4gICAgICAgICAgICBkaXNwbGF5OiBub25lO1xuICAgICAgICB9XG4gICAgICAgIC5kb3dubG9hZHN0b3JlbW9iaWxle1xuICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgICAgdG9wOiA1NTVweDtcbiAgICAgICAgICAgIGxlZnQ6IDA7XG4gICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIH1cbiAgICAgICAgLmFwcFN0b3Jle1xuICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgICAgbGVmdDogMDtcbiAgICAgICAgICAgIG1hcmdpbi10b3A6IDEwJTtcbiAgICAgICAgfVxuICAgICAgICAubGFuZ2ltZ3tcbiAgICAgICAgICAgIHdpZHRoOiA1MCU7XG4gICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgICB0b3A6IC0yM3B4O1xuICAgICAgICAgICAgbGVmdDogMzdweDtcbiAgICAgICAgfVxuICAgICAgICAubG9naW5pbWd7XG4gICAgICAgICAgICB3aWR0aDogNTAlO1xuXG4gICAgICAgIH1cbiAgICAubWFpbmhlYWRpbmd7XG5cbiAgICAgICAgZm9udC1mYW1pbHk6IE11bGlzaDtcbiAgICAgICAgZm9udC1zdHlsZTogbm9ybWFsO1xuICAgICAgICBmb250LXdlaWdodDogODAwO1xuICAgICAgICBmb250LXNpemU6IDM2cHg7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0NXB4O1xuICAgICAgICBcbiAgICAgICAgY29sb3I6ICNGRkZGRkY7fVxuXG4gICAgICAgIC5wZXJhc2VjdGlvbjF7XG5cbiAgICAgICAgZm9udC1mYW1pbHk6IE11bGlzaDtcbiAgICAgICAgZm9udC1zdHlsZTogbm9ybWFsO1xuICAgICAgICBmb250LXdlaWdodDogMzAwO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgICBcbiAgICAgICAgY29sb3I6ICNGRkZGRkY7XG4gICAgICAgIH1cbi5mb290ZXJ7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHRvcDogNDQwcHg7XG59XG4uZm9vdGVyZG93bmxvYWRsaW5re1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW4tYm90dG9tOiAxMCU7XG59XG4uaGVhZGluZ3NlYzJ7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIC8qIHdpZHRoOiA5NnB4OyAqL1xuICAgIC8qIGhlaWdodDogNDhweDsgKi9cbiAgICBsZWZ0OiAxOHB4O1xuICAgIHRvcDogNTBweDtcbiAgICBmb250LWZhbWlseTogTXVsaXNoO1xuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgICBmb250LXdlaWdodDogMjAwO1xuICAgIGZvbnQtc2l6ZTogMzZweDtcbiAgICBsaW5lLWhlaWdodDogNDVweDtcbiAgICBjb2xvcjogI0ZGRkZGRjtcbn1cbi5wZXJhc2VjdGlvbjJ7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIC8qIHdpZHRoOiAyMzRweDsgKi9cbiAgICAvKiBoZWlnaHQ6IDQ4cHg7ICovXG4gICAgbGVmdDogMThweDtcbiAgICB0b3A6IDYwcHg7XG4gICAgZm9udC1mYW1pbHk6IE11bGlzaDtcbiAgICBmb250LXN0eWxlOiBub3JtYWw7XG4gICAgZm9udC13ZWlnaHQ6IDgwMDtcbiAgICBmb250LXNpemU6IDM2cHg7XG4gICAgbGluZS1oZWlnaHQ6IDQ1cHg7XG4gICAgY29sb3I6ICNGRkZGRkY7XG59XG4uY2Fyb3VzZWwtaXRlbXtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG4uY2Fyb3VzZWwtaXRlbSB7XG4gICAgbWFyZ2luLWxlZnQ6IDI2cHg7XG59XG4uY2Fyb3VzZWwtaW5kaWNhdG9ycyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xucmlnaHQ6IDA7XG5ib3R0b206IDA7XG4vKiBtYXJnaW4tdG9wOiA1OHB4OyAqL1xubGVmdDogMDtcbnotaW5kZXg6IDE1O1xudG9wOiAzOTZweDt9XG5cbi50b2dnbGVidG57XG5tYXJnaW4tbGVmdDogNTclO1xuICAgIG1hcmdpbi10b3A6IC0yNSU7XG59XG4ubGlua2RpbmltZ3tcbiAgICB3aWR0aDogMTglO1xufVxufVxuXG5cbkBtZWRpYSAobWluLXdpZHRoOiA0ODBweCkge1xuICAgIC5mb3Jtb2JpbGV7XG4gICAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgfVxufSJdfQ== */</style><meta name="keywords" content="Rajput boys in mp, rajput girls in rajasthan, matrimony services in mp,matrimony services for rajputs,matrimony services in rajsathan,rajput girls in MP,best rajput matrimony,rajput matrimony,rajput lagn,rajput shaadi,verma is which caste,caste of verma,matrimony rajput,matrimony gujarat,matrimonial rajput,rajput matrimonial,rajput matrimony,baghel caste,tanwar caste,rajput girl,rajput girls,rajput boys,rathore caste,rajputana girl,rajpoot boy,himachal girl,himachal girls,rajput of rajasthan,kumaoni brides,rajput wedding,rajputana bride,rajput bride,rajput brides,nri girls,bihar brides,rajput chauhan,rajput rathore,rathore rajputs,jamwal caste,rajput jaipur,shaadi .com boy photo,shaadi com boy photo,rajput parmar,rajawat caste,jadon caste,pathania caste,shadi .com boy,rajput vivah,rohilla rajput,himachal pradesh girl,himachal pradesh girls,katoch caste,verma caste in up,gaharwal,sikarwar caste,sikh rajput,rajput marriage,gujarat rajput,gujarati rajput,rajput in gujarat,rajput of gujarat,gohil caste,rajput sangam,rajput groom,rajput grooms,bais caste,rajput community,which caste is verma,matrimonial rajput brides,rajasthan boy,rajasthan boys,verma caste rajput,verma rajput caste,gaharwal rajput,verma caste in rajasthan,rajput matrimony grooms,rajput brides matrimonial,rajput matrimony brides,rajasthani grooms,rajput shaadi,rajput shadi,rajput brides rajasthan,rajasthani rajput brides,rajasthan brides,rajasthan rathore,jasrotia caste,rajput matrimonial sites,rohilla matrimonial,himachali rajput brides,rajput matrimony contact,matrimonial sites for rajput,rajput matrimony sites,rajput matrimony app,rajput matrimonial login,rajput girl for marriage,rajput matrimony login,rana caste in himachal pradesh,chandrawat rajput,rana caste in uttarakhand,rajput matrimony search,rajput matrimony gujarati"></head>
+
+<body>
+  <app-root _nghost-prc-c17="" ng-version="10.1.2"><router-outlet _ngcontent-prc-c17="">
+
+  </router-outlet><app-home _nghost-prc-c16=""><div _ngcontent-prc-c16="" class="container-fluid"><div _ngcontent-prc-c16="" class="row section1"><div _ngcontent-prc-c16="" class="col-md-6"><img _ngcontent-prc-c16="" src="./lk_files/logo.png" class="logo"><p _ngcontent-prc-c16="" class="tagline mt-4 formobile"> #rishton_ki_shuruaat</p></div>
+    <div _ngcontent-prc-c16="" class="col-sm-4"></div><div _ngcontent-prc-c16="" class="col-sm-2 text-center togglebtn"><label _ngcontent-prc-c16="" class="switch"><input _ngcontent-prc-c16="" type="checkbox" id="togBtn"><div _ngcontent-prc-c16="" class="prisingslider"></div></label>
+  </div><div _ngcontent-prc-c16="" class="col-md-5 section1Leftcol">
+    <h1 _ngcontent-prc-c16="" class="mainheading">Rajput Lagn</h1><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="perasection1">Welcome to Rajput Lagn - matchmaking app for genuine Rajputs. Search and connect with thousands of brides &amp; grooms looking for the right match.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-prc-c16="" class="downloadstoremobile"><img _ngcontent-prc-c16="" src="./lk_files/playStore.png" class="playStore"><img _ngcontent-prc-c16="" src="./lk_files/appStore.png" class="appStore"></div></div><div _ngcontent-prc-c16="" class="col-md-2"></div><div _ngcontent-prc-c16="" class="col-md-5"><img _ngcontent-prc-c16="" src="./lk_files/languageimg.png" class="langimg"><img _ngcontent-prc-c16="" src="./lk_files/loginimg.png" class="loginimg"></div><div _ngcontent-prc-c16="" class="col-md-12 text-center mt-4 onlylaptop" style="margin: auto;"><a _ngcontent-prc-c16="" href="https://rajputlagn.com/#about-rajput-lagn"><img _ngcontent-prc-c16="" src="./lk_files/scroal.png" class="scrolimg"></a></div></div><div _ngcontent-prc-c16="" id="about-rajput-lagn" class="row section1 mt-5"><div _ngcontent-prc-c16="" class="col-md-12"><h1 _ngcontent-prc-c16="" class="headingsec2">Why</h1><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="perasection2">Rajput Lagn?</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-prc-c16="" class="col-md-12 laptopcurser"><div _ngcontent-prc-c16="" class="col-md-10" style="margin: auto;"><div _ngcontent-prc-c16="" id="carouselExampleIndicators2" data-ride="carousel" class="carousel slide"><div _ngcontent-prc-c16="" class="carousel-inner"><div _ngcontent-prc-c16="" class="carousel-item"><div _ngcontent-prc-c16="" class="row"><div _ngcontent-prc-c16="" class="col-md-4 mb-3"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/user.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2">Genuine Rajput <br _ngcontent-prc-c16=""> Profiles </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">All the profiles added goes through out verification process so you get 100% genuine Rajput profiles.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div></div><div _ngcontent-prc-c16="" class="col-md-4 mb-3"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/phone.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2"> Hastle free Registration </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">Simple Registration process and User friendly interface to ensure smooth registration.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div></div><div _ngcontent-prc-c16="" class="col-md-4 mb-3"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/shield.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2">100% privacy </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2"><br _ngcontent-prc-c16="">We ensure that your information is safe &amp; secure with us .</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div></div></div></div><div _ngcontent-prc-c16="" class="carousel-item active"><div _ngcontent-prc-c16="" class="row"><div _ngcontent-prc-c16="" class="col-md-4 mb-3"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/GroupLang.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2">Hindi &amp; English Interface</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">We provide you hindi &amp; english interface so that the language doesn't becomes the barrier to register and search profile.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div></div><div _ngcontent-prc-c16="" class="col-md-4 mb-3"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/user.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2">Genuine Rajput <br _ngcontent-prc-c16=""> Profiles </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">All the profiles added goes through out verification process so you get 100% genuine Rajput profiles.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div></div><div _ngcontent-prc-c16="" class="col-md-4 mb-3"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/phone.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2"> Hastle free Registration </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">Simple Registration process and User friendly interface to ensure smooth registration.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div></div></div></div></div><a _ngcontent-prc-c16="" href="https://rajputlagn.com/#carouselExampleIndicators2" data-slide="prev" class="btn btn-danger mb-3"><i _ngcontent-prc-c16="" class="fa fa-arrow-left"></i></a><a _ngcontent-prc-c16="" href="https://rajputlagn.com/#carouselExampleIndicators2" data-slide="next" class="btn btn-danger mb-3"><i _ngcontent-prc-c16="" class="fa fa-arrow-right"></i></a></div></div></div><div _ngcontent-prc-c16="" class="col-md-12 formobile"><div _ngcontent-prc-c16="" id="mobile" data-ride="carousel" data-pause="hover" data-interval="1000" data-duration="500" class="col-md-12 carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x"><ol _ngcontent-prc-c16="" class="carousel-indicators"><li _ngcontent-prc-c16="" data-target="#mobile" data-slide-to="0" class="active"></li><li _ngcontent-prc-c16="" data-target="#mobile" data-slide-to="1" class=""></li><li _ngcontent-prc-c16="" data-target="#mobile" data-slide-to="2" class=""></li><li _ngcontent-prc-c16="" data-target="#mobile" data-slide-to="3" class=""></li></ol><div _ngcontent-prc-c16="" role="listbox" class="carousel-inner"><div _ngcontent-prc-c16="" class="carousel-item carouselmob carousel-item-next carousel-item-left"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/user.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2">Genuine Rajput Profiles </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">All the profiles added goes through out verification process so you get 100% genuine Rajput profiles.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div></div><div _ngcontent-prc-c16="" class="carousel-item carouselmob"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/phone.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2"> Hastle free Registration </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">Simple Registration process and User friendly interface to ensure smooth registration.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div></div></div><div _ngcontent-prc-c16="" class="carousel-item carouselmob"><div _ngcontent-prc-c16="" class="card"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/shield.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2">100% privacy </p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">We ensure that your information is safe &amp; secure with us .</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div></div><div _ngcontent-prc-c16="" class="carousel-item carouselmob active carousel-item-left"><div _ngcontent-prc-c16="" class="card d-block"><div _ngcontent-prc-c16="" class="card-body"><h5 _ngcontent-prc-c16="" class="card-title text-center"><img _ngcontent-prc-c16="" src="./lk_files/GroupLang.png"></h5><p _ngcontent-prc-c16="" class="card-text mt-2">Hindi &amp; English Interface</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="cardpera mt-2">We provide you hindi &amp; english interface so that the language doesn't becomes the barrier to register and search profile.</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></div></div></div></div><a _ngcontent-prc-c16="" href="https://rajputlagn.com/#mobile" data-slide="prev" class="carousel-control-prev"><span _ngcontent-prc-c16="" aria-hidden="true" class="carousel-control-prev-icon"></span></a><a _ngcontent-prc-c16="" href="https://rajputlagn.com/#mobile" data-slide="next" class="carousel-control-next"><span _ngcontent-prc-c16="" aria-hidden="true" class="carousel-control-next-icon"></span></a></div></div></div><div _ngcontent-prc-c16="" class="row footer mb-4"><div _ngcontent-prc-c16="" class="col-md-3 text-center onlylaptop"><a _ngcontent-prc-c16=""><img _ngcontent-prc-c16="" src="./lk_files/favicon.png" width="65%" class="mr-2 mb-4"></a><p _ngcontent-prc-c16="" class="text-muted">2020 Rajput Lagn. All rights reserved</p></div><div _ngcontent-prc-c16="" class="col-md-3"><h3 _ngcontent-prc-c16="">About <b _ngcontent-prc-c16=""> Us</b></h3><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><p _ngcontent-prc-c16="" class="text-justify">Rajput Lagn is a exclusive Matrimony platform for our Rajput community. Founded by rajputs who understands the essence of rajput Matchmaking.<br _ngcontent-prc-c16=""><br _ngcontent-prc-c16=""> We give you best of both the worlds by offering you genuine profiles &amp; Rajput specific information about the profiles at the ease of your fingertips though our user friendly interface in hindi &amp; english Launguage .</p><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></div><div _ngcontent-prc-c16="" class="col-md-3"><h3 _ngcontent-prc-c16="">Follow <b _ngcontent-prc-c16="">Us</b></h3><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><ul _ngcontent-prc-c16="" class="mt-4 mb-4" style="display: inline-flex;"><a _ngcontent-prc-c16="" href="https://www.facebook.com/Rajputlagn"><img _ngcontent-prc-c16="" src="./lk_files/facebook.png" class="mr-2"></a><a _ngcontent-prc-c16="" href="https://www.instagram.com/rajputlagn/"><img _ngcontent-prc-c16="" src="./lk_files/instagram.png" class="mr-2 ml-2"></a><a _ngcontent-prc-c16="" href="https://rajputlagn.com/linkedin.com/company/rajputlagn"><img _ngcontent-prc-c16="" src="./lk_files/linkedin.png" class="mr-2 ml-2"></a></ul><hr _ngcontent-prc-c16=""><ul _ngcontent-prc-c16="" class="mt-4 mb-4"><li _ngcontent-prc-c16=""><a _ngcontent-prc-c16="">Terms of Use</a></li><li _ngcontent-prc-c16=""><a _ngcontent-prc-c16="">Privacy Policy</a></li><li _ngcontent-prc-c16=""><a _ngcontent-prc-c16="">Blog</a></li></ul></div><div _ngcontent-prc-c16="" class="col-md-3"><h3 _ngcontent-prc-c16="">Download <b _ngcontent-prc-c16="">Link</b></h3><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div _ngcontent-prc-c16="" class="footerdownloadlink"><a _ngcontent-prc-c16=""><img _ngcontent-prc-c16="" src="./lk_files/appStore.png" class="mt-4 mb-4"></a><a _ngcontent-prc-c16=""><img _ngcontent-prc-c16="" src="./lk_files/playStore.png" class="mt-4 mb-4"></a></div></div><div _ngcontent-prc-c16="" class="col-md-12 text-center"><hr _ngcontent-prc-c16=""> © Copyrights ArkadeSky technology pvt ltd 2020. All rights reserved. </div></div></div></app-home><!--container--></app-root>
+<script src="./lk_files/runtime-es2015.js" type="module"></script><script src="./lk_files/runtime-es5.js" nomodule="" defer=""></script><script src="./lk_files/polyfills-es5.js" nomodule="" defer=""></script><script src="./lk_files/polyfills-es2015.js" type="module"></script><script src="./lk_files/styles-es2015.js" type="module"></script><script src="./lk_files/styles-es5.js" nomodule="" defer=""></script><script src="./lk_files/vendor-es2015.js" type="module"></script><script src="./lk_files/vendor-es5.js" nomodule="" defer=""></script><script src="./lk_files/main-es2015.js" type="module"></script><script src="./lk_files/main-es5.js" nomodule="" defer=""></script>
+
+</body></html>

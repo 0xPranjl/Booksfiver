@@ -1,0 +1,18 @@
+product_info-
+sn autoincrement int
+title varchar(100)
+quantity varchar(4)
+category varchar(20)
+price varchar(5)
+Image_link1 varchar(200)
+Image_link2 varchar(200)
+Image_link3 varchar(200)
+Seller_email varchar(100)
+
+Seller_info-
+sn autoincrement int
+naam varchar(100)
+email varchar(100)
+numbe varchar(15)
+Addres varchar(200)
+Passwor varchar(100)
